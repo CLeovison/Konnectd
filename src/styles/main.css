@@ -1,8 +1,5 @@
 :root {
-  --default-back: #1c4da1;
-  --default-2: #143980;
-  --default-3: #527bbd;
-  --default-4: #c4daf1;
+  --navigation-: rgb(20, 23, 36);
   --default-5: #e0b03c;
   --default-6: #ffc63e;
   --default-7: #ffe18b;
@@ -21,11 +18,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #30354c;
+  background-color: var(--navigation-);
 }
 .logo > img {
-  width: 250px;
-  margin-bottom: 10px;
+  width: 210px;
+  margin: 10px;
 }
 
 .nav-items {
@@ -37,7 +34,7 @@
 .nav-links {
   text-decoration: none;
   color: #fffff0;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .nav-links:hover {
   color: var(--default-7);
@@ -49,6 +46,35 @@ body {
   font-weight: 400;
 }
 
+/* Start of Hero Section */
+.Hero {
+  width: 100%;
+}
+.containers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(221, 223, 230);
+}
+.content {
+  text-align: center;
+  font-size: 2em;
+}
+.heads{
+  font-weight: 600;
+  font-size: 1.3em
+}
+.banner > img {
+  width: 300px;
+}
+
+/* End of Hero Section */
+@media (width > 750px) {
+  .nav-links > i {
+    display: none;
+  }
+}
 @media (width < 720px) {
   .navlist {
     position: fixed;
@@ -59,32 +85,34 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    background-color: rgb(30, 34, 51);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
   }
-  .nav-links > i{
+  .nav-links > i {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
   }
-  .nav-links{
+  .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-size: 1em;
+  }
+  /* Start of Hero Section */
+  .banner > img {
+    width: 300px;
   }
 }
-@media(width < 420px){
- 
-  .nav-links{
+@media (width < 420px) {
+  .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 0.9em;
-  
   }
 }
