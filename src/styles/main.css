@@ -98,21 +98,58 @@ body {
 /* End of Hero Section */
 
 /* Start of About Section */
+.About{
+  width: 100%;
+  background-color: rgb(227, 227, 236);
+}
+.titles{
+  font-weight: 600;
+  font-size: 2em;
+  padding: 10px;
+}
 .mission,.vision{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .contents{
   text-align: justify;
-  padding: 10px;
+  padding: 20px;
 }
 .contents > p{
   font-size: 1.2em;
 }
 .imgs > img{
-  width: 250px;
+  width: 230px;
+}
+.principles{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.found{
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+  font-weight: 600;
+}
+
+/* Start of Products Section */
+.Products{
+  width: 100%;
+}
+.images{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.images > img{
+  width: 300px;
+  padding: 10px;
 }
 @media (width > 750px) {
   .nav-links > i {
@@ -155,11 +192,14 @@ body {
     font-size: 0.9em;
     padding: 5px;
   }
+  .containers{
+    padding: 0px;
+  }
   /* Start of About */
   .vision{
     flex-direction: column-reverse;
   }
-
+  
 }
 @media (width < 420px) {
   .nav-links {
