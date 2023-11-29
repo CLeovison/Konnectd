@@ -169,9 +169,40 @@ body {
   list-style: none;
   padding: 10px;
 }
-.modal-title{
+.modal-title {
   padding-top: 10px;
 }
+/* End of Product Section */
+
+/* Start of Services Section */
+.Services {
+  width: 100%;
+}
+.services-title {
+  padding: 20px;
+  font-weight: 600;
+}
+
+.offers-services {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.offers-services > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  list-style-type: none;
+}
+.offers-services > li  >img{
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+}
+/* End of Services Section */
 /* Global Variables */
 .open-img {
   display: flex;
@@ -203,17 +234,7 @@ body {
   filter: blur(2px);
   -webkit-filter: blur(2px);
 }
-button {
-  position: fixed;
-  top: 50%;
-  font-size: 3em;
-}
-.prev {
-  left: 0;
-}
-.next {
-  right: 0;
-}
+
 /* End of Global Variables */
 @media (width > 750px) {
   .nav-links > i {
@@ -266,9 +287,8 @@ button {
 
   .open-img > img {
     width: 250px;
-  
   }
-  .modal-title{
+  .modal-title {
     padding-top: 5px;
   }
 }

@@ -7,37 +7,48 @@ document.documentElement.style.setProperty(
   navigationHeight + "px"
 );
 
-//Modal
-const openImg = document.querySelector(".open-img");
-const images = document.querySelectorAll(".images > img");
-const hiddenImgs = document.querySelector(".hidden-img");
-const mainImage = document.querySelector(".open-img > img");
-const modalTitle = document.querySelector(".modal-title");
+//Start of Modal Section
 
-let currentValue = -1;
+function Modal() {
+  const openImg = document.querySelector(".open-img");
+  const images = document.querySelectorAll(".images > img");
+  const hiddenImgs = document.querySelector(".hidden-img");
+  const mainImage = document.querySelector(".open-img > img");
+  const modalTitle = document.querySelector(".modal-title");
 
-images.forEach((img, value) => {
-  img.addEventListener("click", (x) => {
-    openImg.classList.toggle("active");
+  let currentValue = -1;
 
-    currentValue = value;
+  images.forEach((img, value) => {
+    img.addEventListener("click", (x) => {
+      openImg.classList.toggle("active");
 
-    mainImage.src = x.target.src;
+      currentValue = value;
 
-    if (x.target.alt == "") {
-      modalTitle.innerHTML = "Agile Geek Images";
-    } else {
-      modalTitle.innerHTML = x.target.alt;
+      mainImage.src = x.target.src;
+
+      if (x.target.alt == "") {
+        modalTitle.innerHTML = "Agile Geek Images";
+      } else {
+        modalTitle.innerHTML = x.target.alt;
+      }
+    });
+  });
+
+  hiddenImgs.addEventListener("click", () => {
+    openImg.classList.remove("active");
+  });
+
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      openImg.classList.remove("active");
     }
   });
-});
+}
+Modal();
+//End of Modal Section 
 
-hiddenImgs.addEventListener("click", () => {
-  openImg.classList.remove("active");
-});
+function pageScroll(){
 
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    openImg.classList.remove("active");
-  }
-});
+}
+
+pageScroll();
