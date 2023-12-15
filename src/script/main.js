@@ -16,13 +16,13 @@ function Modal() {
   const mainImage = document.querySelector(".open-img > img");
   const modalTitle = document.querySelector(".modal-title");
 
-  let currentValue = -1;
 
-  images.forEach((img, value) => {
+
+  images.forEach((img) => {
     img.addEventListener("click", (x) => {
       openImg.classList.toggle("active");
 
-      currentValue = value;
+
 
       mainImage.src = x.target.src;
 
@@ -47,8 +47,3 @@ function Modal() {
 Modal();
 //End of Modal Section 
 
-function pageScroll(){
-
-}
-
-pageScroll();
